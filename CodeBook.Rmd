@@ -9,7 +9,7 @@ The data is available at this link:
 A description of this data is available at this link:
 [Description of data](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
 
-Information specifying the raw data format is inclued in the Further Information section at the bottom on this document.
+Information specifying the raw data format is inclued in the Further Information section at the bottom on this document.  All measurement units remain unchanged from in the Tidy Data from those presented in teh Original Raw Data
 
 ### Working Data
 The working data was a subset of the original raw data, selected by filtering only data relating to the mean and standard deviation of measurements.  This was achieved by selecting data with names containing "mean" and "std" only.  Note that is the absence of instructions to ignore Mean Frequency 'meanFreq' data was also retained in the Tidy Dataset.  
