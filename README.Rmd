@@ -6,7 +6,7 @@ This script assumes that data has been downloaded and unziped into "UCI_HAR_Data
 ### Data
 The Samsung data were downloaded from the following link: 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-This data was unzipped into a folder in the workign directory called "UCI_HAR_Dataset" 
+This data was unzipped into a folder in the working directory called "UCI_HAR_Dataset" 
 
 ### Processing
 * Data names are read in from features.txt and activity_labels.txt available in the downloaded data archive
