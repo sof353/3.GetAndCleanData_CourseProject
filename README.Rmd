@@ -1,0 +1,32 @@
+## Getting and Cleaning Data Course Project ReadMe file
+
+### Working Script: run_Analysis.R
+This script assumes that data has been downloaded and unziped into "UCI_HAR_Dataset" folder.  The script checks for the data flder and navigates to the apropriate working directory if it does not see the data folder. This is specific to the environment in which this script was written, and these file paths would need to be adjusted when running the script in a diferent environment.
+
+### Data
+The Samsung data were downloaded from the following link: 
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+This data was unzipped into a folder in the workign directory called "UCI_HAR_Dataset" 
+
+### Processing
+* Data names are read in from features.txt and activity_labels.txt available in the downloaded data archive
+* The training and test datasets are read from subject_train.txt, subject_test.txt, x_train.txt, y_train.txt, x_test.txt, y_test.txt available within the data archive
+* Data labels are added to the x test and train variables using the information read from features.txt, while the data label "subjectID" is applied to subject_test and subject_train and "activityID" is applied to y_test and y_train
+* The separate components of the training and test datasets are bound together creating a complete test and training datasets using cbind()
+* The complete test and training datasets are joined together for a complete dataset using rbind()
+* This complete dataset is then reduced by pulling out information relating to means and standar deviation measurements and values only
+* Descriptive activity labels are merged into the dtaset from the information detailed in activity_label.txt
+* Data names are tidied and more descriptive detail is added is added where required by modifying based on the following actions:  
+     + Empty parenthesis '()' is removed 
+     + "-std" is replaced by "StandardDeviation"
+     + "-mean" is replaced by "Mean"
+     + "BodyBody"is replaced by "Body"
+     + "Mag"is replaced by "Magnitude"
+     + "Freq"is replaced by "Frequency"
+     + "-X" is replaced by "X"
+     + "-Y"is replaced by "Y"
+     + "-Z" is replaced by "Z"
+* Complete dataset is further tidied by splitting the data into subsets based on subject and activity, and computing summary means for each activity by subject
+* Summarized and tidy data is written to a file called "tidyData_UCI_HAR_Dataset.txt" which is placed directly into the working directory
+
+11-23-2014
